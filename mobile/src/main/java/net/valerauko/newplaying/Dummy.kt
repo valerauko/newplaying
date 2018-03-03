@@ -1,20 +1,15 @@
 package net.valerauko.newplaying
 
-import android.content.IntentFilter
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 
 class Dummy : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        addPlayListener()
+        Log.i("Main", "Started")
+        Toast.makeText(this, "Starting up!", Toast.LENGTH_LONG).show()
+        finish()
     }
-
-    private fun addPlayListener() {
-        val pFilter = IntentFilter()
-        pFilter.addAction("com.jrtstudio.AnotherMusicPlayer.playstatechanged")
-        pFilter.addAction("com.jrtstudio.AnotherMusicPlayer.metachanged")
-        registerReceiver(PlayReceiver(), pFilter)
-    }
-
 }

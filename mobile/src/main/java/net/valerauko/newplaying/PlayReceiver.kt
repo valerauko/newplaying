@@ -8,7 +8,7 @@ import android.util.Log
 /**
  * Created by valerauko on 18/03/03.
  */
-public class PlayReceiver : BroadcastReceiver() {
+class PlayReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
         val message = "${intent?.getStringExtra("artist")} - " +
