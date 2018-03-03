@@ -16,12 +16,15 @@
         android:padding="@dimen/inner_frame_layout_padding"
         app:boxedEdges="all">
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hello_world" />
-
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.WearDiag.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/circular_button_normal"
+            android:onClick="sendPost"
+            android:text="#nowplaying!"
+            android:textAlignment="center" />
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>
 
