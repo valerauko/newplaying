@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="sans-serif"
+        android:onClick="sendRequest"
+        android:text="#nowplaying!"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <Switch
+        android:id="@+id/twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:checked="true"
+        android:padding="15dp"
+        android:text="Twitter"
+        android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/mastodon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/twitter"
+        android:layout_below="@+id/twitter"
+        android:checked="true"
+        android:padding="15dp"
+        android:text="Mastodon"
+        android:textSize="18sp" />
+
+</RelativeLayout>
