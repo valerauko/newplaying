@@ -36,5 +36,14 @@
                 <action android:name="com.jrtstudio.AnotherMusicPlayer.metachanged" />
             </intent-filter>
         </receiver>
+
+        <receiver
+            android:name=".PostIt"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="net.valerauko.newplaying.SEND_REQUESTED" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

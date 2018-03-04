@@ -38,3 +38,4 @@ build/
 .navigation
 captures/
 output.json
+mobile/src/main/res/values/auths.xml
