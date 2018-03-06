@@ -21,11 +21,11 @@ class PostMastodon(ctx: Context): Poster(ctx, "mastodon") {
 
             val message = msg[0]
 
-            val writer = OutputStreamWriter(outputStream)
-            writer.write("client_id=${data.token}&client_secret=${data.secret}&" +
-                    "visibility=public&sensitive=false&status=$message")
-            writer.flush()
-            writer.close()
+            OutputStreamWriter(outputStream).use {
+                it.write("client_id=${data.token}&client_secret=${data.secret}&" +
+                        "visibility=public&sensitive=false&status=$message")
+                it.flush()
+            }
             Log.i(tag, responseMessage)
             disconnect()
 
