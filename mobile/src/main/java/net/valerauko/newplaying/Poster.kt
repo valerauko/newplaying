@@ -15,6 +15,7 @@ abstract class Poster(ctx: Context, private val service: String): AsyncTask<Stri
     protected val canPost = prefs.getBoolean(service,true)
 
     override fun onPostExecute(result: Boolean) {
+        if (!canPost) return
         val message = if (result) "Posted to $service!" else "Failed to post to $service!"
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
